@@ -5896,6 +5896,7 @@ print {
 }
 
 .navbar.is-white .navbar-brand>.navbar-item,
+.navbar.is-white .navbar-end>.navbar-item,
 .navbar.is-white .navbar-brand .navbar-link {
     color: #0a0a0a
 }
@@ -6822,11 +6823,9 @@ a.navbar-item.is-active,
 }
 
 @media screen and (max-width: 1023px) {
-    .navbar>.container {
-        display: block
-    }
 
     .navbar-brand .navbar-item,
+    .navbar-end .navbar-item,
     .navbar-tabs .navbar-item {
         align-items: center;
         display: flex
@@ -6884,16 +6883,18 @@ a.navbar-item.is-active,
     }
 }
 
+.navbar,
+.navbar-menu,
+.navbar-start,
+.navbar-end {
+    align-items: stretch;
+    display: flex
+}
+
+
 @media screen and (min-width: 1024px) {
 
-    .navbar,
-    .navbar-menu,
-    .navbar-start,
-    .navbar-end {
-        align-items: stretch;
-        display: flex
-    }
-
+    
     .navbar {
         min-height: 3.25rem
     }
@@ -6940,6 +6941,7 @@ a.navbar-item.is-active,
     }
 
     .navbar-burger {
+
         display: none
     }
 
@@ -6994,11 +6996,6 @@ a.navbar-item.is-active,
     .navbar-start {
         justify-content: flex-start;
         margin-right: auto
-    }
-
-    .navbar-end {
-        justify-content: flex-end;
-        margin-left: auto
     }
 
     .navbar-dropdown {
@@ -7124,6 +7121,11 @@ a.navbar-item.is-active,
     .navbar-item.has-dropdown.is-active .navbar-link {
         background-color: #fafafa
     }
+}
+
+.navbar-end {
+    justify-content: flex-end;
+    margin-left: auto
 }
 
 .hero.is-fullheight-with-navbar {
