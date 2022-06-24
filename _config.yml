@@ -1,0 +1,50 @@
+# Site Settings
+title: Mere Blog Theme
+tagline: Mere Blog Theme
+email: your-email@domain.com
+description: >
+  The demo site for Mere Blog Theme, made for Jekyll and GitHub pages websites
+baseurl: ""
+permalink: pretty
+
+paginate: 6
+paginate_path: "/page:num"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - kramdown
+  - rouge
+
+exclude:
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Your Name"
+      layout: post
+      image:  #You can put a path of default image of posts
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+
+collections:
+  authors:
+    output: true
